@@ -154,16 +154,6 @@
     z-index: -10;
   }
 
-  a,
-  a:visited,
-  a:hover {
-    color: #1976d2;
-    text-decoration: none;
-  }
-
-  a:hover {
-    color: #125699;
-  }
 
   .terminal {
     position: relative;
@@ -255,13 +245,7 @@
     margin-right: 4px;
   }
 
-  svg#clouds {
-    position: fixed;
-    bottom: -160px;
-    left: -230px;
-    z-index: -10;
-    width: 1920px;
-  }
+
 
   /* Responsive Styles */
   @media screen and (max-width: 767px) {
@@ -280,10 +264,7 @@
       margin-left: 72px;
     }
 
-    svg#rocket-smoke {
-      right: 120px;
-      transform: rotate(-5deg);
-    }
+
   }
 
   @media screen and (max-width: 575px) {
@@ -292,11 +273,91 @@
       visibility: hidden;
     }
   }
+
+  @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Fira+Mono:wght@500&display=swap');
+
+  body {
+    height: 95vh;
+    background: #000000;
+    text-align: center;
+    color: #E0E0E0;
+    font-family: 'Fira Mono', monospace;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    font-family: 'Permanent Marker', cursive;
+  }
+
+  div {
+    transform-style: preserve-3d;
+  }
+
+  svg {
+    width: clamp(300px, 70%, 600px);
+    height: 500px;
+
+  }
+
+  #rocket {
+
+    transform: translateY(750px);
+
+    animation: launch 2s ease-out forwards;
+  }
+
+  @keyframes launch {
+    from {
+      transform: translateY(750px);
+    }
+
+    to {
+      perspective: 500px;
+      transform: translateY(0px);
+    }
+  }
+
+  #stars {
+    animation: twinkling 2s linear;
+  }
+
+  @keyframes twinkling {
+
+    from {
+      transform: scale(0);
+    }
+
+    to {
+      transform: scale(1);
+    }
+  }
+
+  .text {
+    opacity: 0;
+    animation: appear 1s ease-in forwards;
+    animation-delay: 1.8s;
+  }
+
+  @keyframes appear {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  a {
+    color: #F66947;
+    text-decoration: none;
+  }
 </style>
 
 <!-- Toolbar -->
 <div class="toolbar" role="banner">
-  <img width="40" alt="Angular Logo" src="../logo/logo.png" />
+  <img width="40" alt="Angular Logo"
+    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==" />
   <span>Greentooth technologies </span>
   <div class="spacer"></div>
   <a aria-label="Angular on twitter" target="_blank" rel="noopener" href="https://twitter.com/angular" title="Twitter">
@@ -530,3 +591,72 @@
 
 
 <router-outlet></router-outlet>
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Fira+Mono:wght@500&display=swap');
+body{
+height: 95vh;
+background: #000000;
+text-align: center;
+color: #E0E0E0;
+font-family: 'Fira Mono', monospace;
+}
+h1{
+font-size: 2.5rem;
+font-family: 'Permanent Marker', cursive;
+}
+div{
+transform-style: preserve-3d;
+}
+svg{
+width: clamp(300px , 70% , 600px);
+height: 500px;
+
+}
+#rocket{
+
+transform: translateY(750px);
+
+animation: launch 2s ease-out forwards;
+}
+
+@keyframes launch {
+from {
+transform: translateY(750px);
+}
+to{
+perspective: 500px;
+transform: translateY(0px);
+}
+}
+#stars {
+animation: twinkling 2s linear ;
+}
+@keyframes twinkling {
+
+from{
+transform: scale(0);
+}
+to{
+transform: scale(1);
+}
+}
+.text{
+opacity: 0;
+animation:appear 1s ease-in forwards;
+animation-delay: 1.8s;
+}
+@keyframes appear {
+from{
+opacity: 0;
+}
+to{
+opacity: 1;
+}
+}
+a{
+color:#F66947;
+text-decoration: none;
+}
