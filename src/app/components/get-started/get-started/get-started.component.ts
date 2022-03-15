@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { AdminLoginComponent } from '../../auth/admin-login/admin-login.component';
 
 @Component({
   selector: 'app-get-started',

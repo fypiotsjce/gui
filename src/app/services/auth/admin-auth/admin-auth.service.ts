@@ -19,7 +19,7 @@ export class AdminAuthService {
   test(): any{
     console.log("Adm-auth-service test getting-data");
     return this.http
-    .get(this.apiURL)
+    .get(this.apiURL + "5004")
     .pipe(retry(1), catchError(this.handleError));
   }
 

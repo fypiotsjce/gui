@@ -6,7 +6,11 @@ import { MainPageComponent } from './widgets/main-page/main-page.component';
 import { GetStartedComponent } from './components/get-started/get-started/get-started.component';
 import { HeaderComponent } from './components/common/header/header.component';
 import { FooterComponent } from './components/common/footer/footer.component';
-import { AdminLoginComponent } from './components/auth/admin-login/admin-login.component';
+import { AdminAuthService } from './services/auth/admin-auth/admin-auth.service';
+import { AdminAuthComponent } from './components/auth/admin-auth/admin-auth.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -15,10 +19,13 @@ import { AdminLoginComponent } from './components/auth/admin-login/admin-login.c
     GetStartedComponent,
     HeaderComponent,
     FooterComponent,
-    AdminLoginComponent
+    AdminAuthComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule
   ],
   providers: [],
