@@ -23,6 +23,13 @@ export class AdminAuthService {
     .pipe(retry(1), catchError(this.handleError));
   }
 
+  testpost(formdata:any) {
+    console.log("Adm-auth-service test getting-data");
+    return this.http
+    .post(this.apiURL + "5004/admin_auth", formdata)
+    .pipe(retry(1), catchError(this.handleError));
+  }
+
     // Error handling
     handleError(error: any) {
       let errorMessage = '';
@@ -33,7 +40,7 @@ export class AdminAuthService {
         // Get server-side error
         errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
       }
-      window.alert(errorMessage);
+      //window.alert(errorMessage);
       return throwError(() => {
         return errorMessage;
       });
