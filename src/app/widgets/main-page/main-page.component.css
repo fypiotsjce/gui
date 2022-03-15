@@ -101,7 +101,7 @@
     border: 1px solid #eee;
     background-color: #fafafa;
     height: 40px;
-    width: 200px;
+    width: 200px; 
     margin: 0 8px 16px;
     padding: 16px;
     display: flex;
@@ -166,12 +166,13 @@
   a,
   a:visited,
   a:hover {
-    color: #1976d2;
+    color:  #000000;
     text-decoration: none;
   }
 
   a:hover {
-    color: #125699;
+    color: #000000;
+
   }
 
   .terminal {

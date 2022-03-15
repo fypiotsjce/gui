@@ -6,12 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-page.component.css']
 })
 export class MainPageComponent implements OnInit {
-
-  title = "Final Year Project";
-
   constructor() { }
 
   ngOnInit(): void {
   }
+  //stable variables
+  title = "Final Year Project";
+  banner_text = "Final Year project has started"
+
+
+
+
+
+
 
 }
