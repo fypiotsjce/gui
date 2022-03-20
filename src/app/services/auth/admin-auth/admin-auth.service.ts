@@ -12,7 +12,7 @@ export class AdminAuthService {
   constructor(private http: HttpClient) { }
   public httpOptions = {
     headers: new HttpHeaders({
-      'Content-Type': 'application/x-www-form-urlencoded',
+      'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8',
     }),
   };
 
