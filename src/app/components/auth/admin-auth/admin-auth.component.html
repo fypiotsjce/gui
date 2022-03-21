@@ -1,39 +1,18 @@
 <button (click)="test()">Test</button>
-<br>
-<!-- <div class="container custom-container">
+<div class="container custom-container">
     <div class="col-md-12">
         <h3 class="mb-3 text-center">Admin Login</h3>
         <div class="form-group">
-            <input type="text" ngDefaultControl [(ngModel)]="adminLogin.uid" class="formControl" placeholder="UID">
+            <input type="text" [(ngModel)]="adminLogin.uid" class="form-control" placeholder="UID">
         </div>
         <br>
         <div class="form-group">
-            <input type="text" ngDefaultControl [(ngModel)]="adminLogin.pin" class="formControl" placeholder="PIN">
+            <input type="text" [(ngModel)]="adminLogin.pin" class="form-control" placeholder="PIN">
         </div>
         <br>
         <div class="form-group">
-            <button class="btn btn-success btn-lg btn-block" type="submit" (click)="testpost(adminLogin)">Login</button>
+            <button class="btn btn-success btn-lg btn-block" (click)="testpost(adminLogin)">Login</button>
         </div>
     </div>
-    <br>
     <p>Login response : {{adminAuthRes}}</p>
-</div> -->
-
-
-<form #contactForm="ngForm" (ngSubmit)="testpost(contactForm)">
- 
-    <p>
-      <label for="uid">UID</label>
-      <input type="text" name="uid" ngModel>
-    </p>
-   
-    <p>
-      <label for="pin">PIN</label>
-      <input type="text" name="pin" ngModel>
-    </p>
-
-    <p>
-      <button type="submit">Submit</button>
-    </p>
-    
-  </form>
+</div>
