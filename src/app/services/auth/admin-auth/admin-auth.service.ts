@@ -24,7 +24,7 @@ export class AdminAuthService {
   }
 
   testpost(formdata:any) {
-    console.log("Adm-auth-service test getting-data");
+    console.log("Adm-auth-service testpost posting-data");
     return this.http
     .post(this.apiURL + "5004/admin_auth", formdata)
     .pipe(retry(1), catchError(this.handleError));
