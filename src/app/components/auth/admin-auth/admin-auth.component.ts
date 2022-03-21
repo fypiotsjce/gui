@@ -34,8 +34,8 @@ export class AdminAuthComponent implements OnInit {
   }
 
   testpost(a:any) {
-    console.log("Admin-auth-comp testpost posting-request",a.value);
-    this.adminAuth.testpost(a.value).subscribe((data: {}) => {
+    console.log("Admin-auth-comp testpost posting-request");
+    this.adminAuth.testpost(a).subscribe(data => {
       this.adminAuthRes = data;
     });
     console.log("Admin-auth-comp testpost post-response : ", this.adminAuthRes);
