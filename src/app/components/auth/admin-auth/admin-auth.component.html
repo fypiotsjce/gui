@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <button (click)="test()">Login To control your network</button>
 <div class="container custom-container">
     <div class="col-md-12">
@@ -8,11 +9,48 @@
         <br>
         <div class="form-group">
             <input type="text" [(ngModel)]="adminLogin.pin" class="form-control" placeholder="PIN" required>
+=======
+<button (click)="test()">Test</button>
+<br>
+<!-- <div class="container custom-container">
+    <div class="col-md-12">
+        <h3 class="mb-3 text-center">Admin Login</h3>
+        <div class="form-group">
+            <input type="text" ngDefaultControl [(ngModel)]="adminLogin.uid" class="formControl" placeholder="UID">
         </div>
         <br>
         <div class="form-group">
-            <button class="btn btn-success btn-lg btn-block" (click)="testpost(adminLogin)">Login</button>
+            <input type="text" ngDefaultControl [(ngModel)]="adminLogin.pin" class="formControl" placeholder="PIN">
+>>>>>>> parent of e94f7a7 (Admin auth update4)
+        </div>
+        <br>
+        <div class="form-group">
+            <button class="btn btn-success btn-lg btn-block" type="submit" (click)="testpost(adminLogin)">Login</button>
         </div>
     </div>
+    <br>
     <p>Login response : {{adminAuthRes}}</p>
+<<<<<<< HEAD
 </div>
+=======
+</div> -->
+
+
+<form #contactForm="ngForm" (ngSubmit)="testpost(contactForm)">
+ 
+    <p>
+      <label for="uid">UID</label>
+      <input type="text" name="uid" ngModel>
+    </p>
+   
+    <p>
+      <label for="pin">PIN</label>
+      <input type="text" name="pin" ngModel>
+    </p>
+
+    <p>
+      <button type="submit">Submit</button>
+    </p>
+    
+  </form>
+>>>>>>> parent of e94f7a7 (Admin auth update4)
